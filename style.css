@@ -1,0 +1,36 @@
+*{box-sizing:border-box;font-family:Arial}
+body{margin:0;background:#f4f4f4}
+header{background:#2e7d32;color:white;padding:10px 20px;display:flex;justify-content:space-between}
+.logo{display:flex;align-items:center}
+.logo img{height:40px;margin-right:10px}
+.top-actions{display:flex;gap:10px}
+input,textarea{width:100%;padding:8px;margin:5px 0}
+.hero{text-align:center;background:#c8e6c9;padding:40px}
+.products{padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:white;padding:15px;border-radius:6px;text-align:center}
+.card img{width:100%;height:auto;object-fit:cover}
+.qty{display:flex;justify-content:center;gap:10px}
+.qty button{background:#2e7d32;color:white;border:none;padding:5px 10px}
+.cart{background:white;margin:20px;padding:20px;border-radius:6px}
+.checkout{display:block;background:#25D366;color:white;text-align:center;padding:15px;border-radius:6px;text-decoration:none;font-weight:bold}
+footer{text-align:center;background:#2e7d32;color:white;padding:10px}
+
+/* DARK MODE */
+.dark{background:#121212;color:white}
+.dark .card,.dark .cart{background:#1e1e1e}
+.dark header,.dark footer{background:#000}
+
+select {
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0;
+}
+.card select {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  display: block; /* ensures it shows */
+}
+
+

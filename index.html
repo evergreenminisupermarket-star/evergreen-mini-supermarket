@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evergreen Mini Supermarket</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="favicon.png" width="80" alt="Evergreen Mini Supermarket">
+    <h1>Evergreen Mini Supermarket</h1>
+  </div>
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#cart">Checkout</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Order Groceries via WhatsApp</h2>
+  <p>Select item • Type • Size • Quantity</p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+<h2>Grocery Items</h2>
+
+<div class="grid">
+
+<!-- ================= DETERGENT ================= -->
+<div class="card">
+  <img src="images/Detergents.jpg">
+  <h3>Detergent</h3>
+
+  <select id="detergentType">
+    <option>Ariel</option>
+    <option>Omo</option>
+    <option>Sunlight</option>
+    <option>Persil</option>
+    <option>Msafi</option>
+    <option>Kleensoft</option>
+  </select>
+
+  <select id="detergentSize">
+    <option>½ Kg</option>
+    <option>1 Kg</option>
+    <option>2 Kg</option>
+  </select>
+
+  <div class="qty">
+    <button onclick="changeQty('Detergent',-1)">−</button>
+    <span id="Detergent">0</span>
+    <button onclick="changeQty('Detergent',1)">+</button>
+  </div>
+</div>
+
+<!--=====================FRUITS=====================-->
+<div class="card">
+  <img src="images/Fruits.jpg" alt="Fruits">
+  <h3>Fruits (Matunda)</h3>
+
+  <!-- Fruit Types with Kiswahili/local names -->
+  <select id="fruitsType">
+    <option>Apples (Tufaha)</option>
+    <option>Bananas (Ndizi)</option>
+    <option>Mangoes (Embe)</option>
+    <option>Oranges (Chungwa)</option>
+    <option>Pineapples (Nanasi)</option>
+    <option>Watermelon (Tikiti Maji)</option>
+    <option>Passion Fruit (Matunda ya Passion / Mbizo)</option>
+    <option>Avocado (Parachichi)</option>
+    <option>Guava (Mwembe / Gwava)</option>
+    <option>Pawpaw / Papaya (Papai)</option>
+  </select>
+
+  <!-- Sizes / Quantities -->
+  <select id="fruitsSize">
+    <option>1 pcs</option>
+    <option>½ Kg</option>
+    <option>1 Kg</option>
+    <option>2 Kg</option>
+    <option>1 Pack</option>
+  </select>
+
+  <!-- Quantity Controls -->
+  <div class="qty">
+    <button onclick="changeQty('Fruits',-1)">−</button>
+    <span id="Fruits">0</span>
+    <button onclick="changeQty('Fruits',1)">+</button>
+  </div>
+</div>
+
+<!-- ================= COOKING OIL ================= -->
+<div class="card">
+  <img src="images/Cooking Oil.jpg" alt="Cooking Oils">
+  <h3>Cooking Oils</h3>
+
+  <!-- Oil Types / Brands -->
+  <select id="cooking_oilType">
+    <option>Kimbo</option>
+    <option>Cowboy</option>
+    <option>Golden Fry</option>
+    <option>Fresh Fri</option>
+    <option>Ufuta</option>
+    <option>Dola</option>
+    <option>Pika</option>
+    <option>Somo Fry</option>
+    <option>Bahari Fry</option>
+    <option>Soya Gold</option>
+    <option>Salit</option>
+</select>
+
+  </select>
+
+  <!-- Sizes / Quantities -->
+  <select id="cooking_oilSize">
+    <option>250ml</option>
+    <option>500ml</option>
+    <option>750ml</option>
+    <option>1 Litre</option>
+    <option>2 Litres</option>
+    <option>5 Litres</option>
+  </select>
+
+  <!-- Quantity Controls -->
+  <div class="qty">
+    <button onclick="changeQty('Cooking_Oil',-1)">−</button>
+    <span id="Cooking_Oil">0</span>
+    <button onclick="changeQty('Cooking_Oil',1)">+</button>
+  </div>
+</div>
+
+<!--------------------- VEGETABLES --------------------->
+<div class="card">
+  <img src="images/Vegetables.jpg" width="50" alt="Vegetables">
+  <h3>Vegetables (Mboga)</h3>
+
+  <select id="vegetablesType">
+    <option>Spinach (Sukuma Wiki)</option>
+    <option>Amaranth (Terere / Mchicha)</option>
+    <option>Cabbage (Kabeji)</option>
+    <option>Carrots (Karoti)</option>
+    <option>Tomatoes (Nyanya)</option>
+    <option>Onions (Kitunguu)</option>
+    <option>Green Peas (Pili Pili Mboga)</option>
+    <option>Capsicum (Pilipili Hoho)</option>
+    <option>Okra (Bamia)</option>
+    <option>Eggplant (Biringanya )</option>
+    <option>Beetroot (Beet / Shina la Chungu)</option>
+    <option>Garlic (Kitunguu Saumu)</option>
+    <option>Ginger (Tangawizi)</option>
+    <option>Coriander (Korianda)</option>
+    <option>Spring Onions (Kitunguu Saumu Chungu / Green Onions)</option>
+    <option>Sweet Potatoes (Viazi Vitamu / Mashu)</option>
+    <option>Pumpkin Leaves (Mboga ya Maboga / Malenge)</option>
+    <option>Kale (Sukuma / Kabeji Mboga)</option>
+    <option>Arrowroots Nduma</option>
+  </select>
+
+  <select id="vegetablesSize">
+    <option>pcs</option>
+    <option>250g</option>
+    <option>500g</option>
+    <option>1kg</option>
+    <option>Bundle</option>
+  </select>
+
+  <div class="qty">
+    <button onclick="changeQty('Vegetables',-1)">−</button>
+    <span id="Vegetables">0</span>
+    <button onclick="changeQty('Vegetables',1)">+</button>
+  </div>
+</div>
+<div class="card">
+  <img src="images/potatoes.jpeg" alt="Potatoes">
+  <h3>Potatoes (Viazi)</h3>
+
+  <!-- Potato Types / Brands -->
+  <select id="potatoesType">
+    <option>Kenya</option>
+    <option>Local</option>
+    <option>Irish</option>
+    <option>Sweet</option>
+  </select>
+
+  <!-- Sizes / Quantities -->
+  <select id="potatoesSize">
+    <option>1 Kg</option>
+    <option>2 Kg</option>
+    <option >5 Kg</option>
+    <option>10 Kg</option>
+    <option>Debe</option>
+  </select>
+
+  <!-- Quantity Controls -->
+  <div class="qty">
+    <button onclick="changeQty('Potatoes',-1)">−</button>
+    <span id="Potatoes">0</span>
+    <button onclick="changeQty('Potatoes',1)">+</button>
+  </div>
+</div>
+
+<!-- ================= MAIZE FLOUR ================= -->
+<div class="card">
+  <img src="images/MaizeFlour.jpg" alt="Maize Flour">
+  <h3>Maize Flour (Unga wa Mahindi)</h3>
+
+  <!-- Maize Flour Brands -->
+  <select id="maize_flourType">
+    <option>Jogoo</option>
+    <option>Soko</option>
+    <option>Dola</option>
+    <option>Pembe</option>
+    <option>Ajab</option>
+    <option>Amaize</option>
+    <option>Hostess</option>
+    <option>Jambo</option>
+    <option>Ndovu</option>
+    <option>Prestige</option>
+    <option>Tamu</option>
+    <option>Top White</option>
+    <option>Winnies</option>
+    <option>Afya</option>
+    <option>Bel's</option>
+    <option>Family</option>
+    <option>Jasiri</option>
+    <option>Jema</option>
+    <option>Jibe</option>
+    <option>Jodari</option>
+  </select>
+
+  <!-- Sizes / Quantities -->
+  <select id="maize_flourSize">
+    <option>1</option>
+    <option>5</option>
+    <option>10</option>
+    <option>12</option>
+  </select>
+
+  <!-- Quantity Controls -->
+  <div class="qty">
+    <button onclick="changeQty('Maize_Flour',-1)">−</button>
+    <span id="Maize_Flour">0</span>
+    <button onclick="changeQty('Maize_Flour',1)">+</button>
+  </div>
+</div>
+
+<!-- ===================== RICE ===================== -->
+<div class="card">
+  <img src="images/rice.jpg">
+  <h3>Rice</h3>
+
+  <select id="riceType">
+    <option>Pishori</option>
+    <option>Basmati</option>
+    <option>Sindano</option>
+    <option>Kenya Special</option>
+    <option>Super Kernal</option>
+    <option>Sunrice</option>
+    <option>Pakistan</option>
+    <option>Indian</option>
+    <option>Royal Umbrella</option>
+    <option>Rwandese</option>
+    <option>Locally Milled</option>
+  </select>
+
+  <select id="riceSize">
+    <option>500g</option>
+    <option>1 Kg</option>
+    <option>2 Kg</option>
+    <option>5 Kg</option>
+    <option>10 Kg</option>
+    <option>25 Kg</option>
+  </select>
+
+  <div class="qty">
+    <button onclick="changeQty('Rice',-1)">−</button>
+    <span id="Rice">0</span>
+    <button onclick="changeQty('Rice',1)">+</button>
+  </div>
+</div>
+
+<!-- ================= STATIONERIES ================= -->
+<div class="card">
+  <img src="images/Stationeries.jpg" alt="Stationeries">
+  <h3>Stationeries</h3>
+
+  <!-- Updated Stationery Types -->
+  <select id="stationeriesType">
+    <!-- Writing & Note-taking -->
+    <option>Exercise Books (Single & Quad)</option>
+    <option>Notebooks</option>
+    <option>Pencils</option>
+    <option>Pens (Ballpoint / Gel)</option>
+    <option>Markers (Permanent / Whiteboard)</option>
+    <option>Highlighters</option>
+    <option>Ruler / Geometry Set</option>
+    <option>Erasers</option>
+    <option>Sharpeners</option>
+
+    <!-- Paper & Printing -->
+    <option>Reams of Paper (Foolscap / A4)</option>
+    <option>Graph Paper</option>
+
+    <!-- Bags & Storage -->
+    <option>School Bags / Backpacks</option>
+    <option>File Folders / Document Holders</option>
+    
+    <!-- Miscellaneous -->
+    <option>Watches / Timers</option>
+    <option>Glue / Adhesives</option>
+    <option>Scissors</option>
+    <option>Staplers & Staples</option>
+  </select>
+
+  <!-- Sizes / Quantities -->
+  <select id="stationeriesSize">
+    <option>1</option>
+    <option>5</option>
+    <option>10</option>
+    <option>12</option>
+  </select>
+
+  <!-- Quantity Controls -->
+  <div class="qty">
+    <button onclick="changeQty('Stationeries',-1)">−</button>
+    <span id="Stationeries">0</span>
+    <button onclick="changeQty('Stationeries',1)">+</button>
+  </div>
+</div>
+
+<!-- ================= CEREALS=================== -->
+  <div class="card">
+  <img src="images/Cereals.jpg" width="50" alt="Cereals">
+  <h3>Cereals</h3>
+
+  <select id="cerealsType">
+    <option>Millet</option>
+    <option>Sorghum</option>
+    <option>Oats</option>
+    <option>Barley</option>
+    <option>Beans</option>
+    <option>Green Grams (Ndengu)</option>
+    <option>Peas</option>
+    <option>Lentils (Kamande)</option>
+
+  </select>
+
+  <select id="cerealsSize">
+    <option>1/2</option>
+    <option>12</option>
+    
+  </select>
+
+  <div class="qty">
+    <button onclick="changeQty('Cereals',-1)">−</button>
+    <span id="Cereals">0</span>
+    <button onclick="changeQty('Cereals',1)">+</button>
+  </div>
+</div>
+<!-- ================= SKINCARE PRODUCTS ========== -->
+ <div class="card">
+  <img src="images/Skin Care Products.jpg" width="50" alt="Skin Care Products">
+  <h3>Skin Care Products</h3>
+
+  <select id="skincareType">
+    <!-- Lotions & Creams -->
+    <option>Lotion</option>
+    <option>Body Butter</option>
+    <option>Face Cream</option>
+    <option>Hand Cream</option>
+    <option>Baby Lotion</option>
+    <option>Sunscreen</option>
+
+    <!-- Bathing Soaps -->
+    <option>Lux Soap</option>
+    <option>Dettol Soap</option>
+    <option>Imperial Leather</option>
+    <option>Medicated Soap</option>
+    <option>Dove Soap</option>
+    <option>Sunlight Soap</option>
+
+    <!-- Oils -->
+    <option>Coconut Oil</option>
+    <option>Olive Oil</option>
+    <option>Baby Oil</option>
+    <option>Vitamin E Oil</option>
+    <option>Massage Oil</option>
+
+    <!-- Other Skin Care -->
+    <option>Shower Gel</option>
+    <option>Body Scrub</option>
+  </select>
+
+  <select id="skincareSize">
+    <option>50ml</option>
+    <option>100ml</option>
+    <option>200ml</option>
+    <option>500ml</option>
+    <option>1kg / 1L</option>
+    <option>2kg / 2L</option>
+    <option>200g</option>
+    <option>500g</option>
+    <option>1 pc</option>
+  </select>
+
+  <div class="qty">
+    <button onclick="changeQty('Skincare',-1)">−</button>
+    <span id="Skincare">0</span>
+    <button onclick="changeQty('Skincare',1)">+</button>
+  </div>
+</div>
+<!-- ================= SPICES ======================= -->
+ <div class="card">
+  <img src="images/Natural Spices.jpg" alt="Spices">
+  <h3>Spices (Viungo)</h3>
+
+  <select id="spicesType">
+    <option>Pilau Masala</option>
+    <option>Cardamom (Iliki)</option>
+    <option>Cloves (Karafuu)</option>
+    <option>Cinnamon (Mdalasini)</option>
+    <option>Black Pepper (Pilipili Manga)</option>
+    <option>Chili Powder (Pilipili ya Kuku / Nyanya)</option>
+    <option>Ginger Powder (Tangawizi)</option>
+    <option>Turmeric (Manjano)</option>
+    <option>Garlic Powder (Kitunguu Saumu)</option>
+    <option>Curry Powder (Viungo vya Curry)</option>
+    <option>Nutmeg (Hindimu)</option>
+    <option>Thyme (Timu)</option>
+    <option>Bay Leaves (Majani ya Bay)</option>
+  </select>
+
+  <select id="spicesSize">
+    <option>50g</option>
+    <option>100g</option>
+    <option>250g</option>
+    <option>500g</option>
+    <option>1kg</option>
+  </select>
+
+  <div class="qty">
+    <button onclick="changeQty('Spices',-1)">−</button>
+    <span id="Spices">0</span>
+    <button onclick="changeQty('Spices',1)">+</button>
+  </div>
+</div>
+<!-- ================= SUGAR ======================= -->
+<div class="card">
+  <img src="images/Sugar.jpg" width="50" height="40">
+  <h3>Sugar</h3>
+
+  <select id="sugarType">
+    <option>White</option>
+    <option>Brown</option>
+  </select>
+
+  <select id="sugarSize">
+    <option>1 Kg</option>
+    <option>2 Kg</option>
+  </select>
+
+  <div class="qty">
+    <button onclick="changeQty('Sugar',-1)">−</button>
+    <span id="Sugar">0</span>
+    <button onclick="changeQty('Sugar',1)">+</button>
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- CART -->
+<section class="cart" id="cart">
+<h2>Your Order</h2>
+<ul id="cartItems"></ul>
+
+<button onclick="clearCart()">🧹 Clear Cart/Futa</button>
+
+<a id="whatsappBtn" class="checkout" target="_blank">
+Checkout via WhatsApp
+</a>
+</section>
+
+<footer>© 2025 Evergreen Mini Supermarket. Merry X-mass & Happy New Year 2026. </footer>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+// CHANGE QUANTITY (ADD / REDUCE FROM PRODUCT CONTROLS)
+function changeQty(item, change) {
+
+  let type = document.getElementById(item.toLowerCase().replace(" ","") + "Type")?.value || "";
+  let size = document.getElementById(item.toLowerCase().replace(" ","") + "Size")?.value || "";
+
+  let key = item + "|" + type + "|" + size;
+
+  cart[key] = (cart[key] || 0) + change;
+  if (cart[key] < 0) cart[key] = 0;
+
+  saveCart();
+  renderCart();
+}
+
+// ➖ REDUCE QUANTITY PER ITEM
+function reduceItem(key) {
+  cart[key]--;
+  if (cart[key] <= 0) delete cart[key];
+  saveCart();
+  renderCart();
+}
+
+// ❌ REMOVE ITEM COMPLETELY
+function removeItem(key) {
+  delete cart[key];
+  saveCart();
+  renderCart();
+}
+
+// 🧹 CLEAR CART
+function clearCart() {
+  cart = {};
+  localStorage.removeItem("cart");
+  renderCart();
+}
+
+// 💾 SAVE CART
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// RENDER CART
+function renderCart() {
+  let list = document.getElementById("cartItems");
+  list.innerHTML = "";
+
+  let message = "I have added the following items on my cart. Confirm if they are available:%0A%0A";
+
+  for (let key in cart) {
+    if (cart[key] > 0) {
+
+      let [item, type, size] = key.split("|");
+
+      list.innerHTML += `
+        <li>
+          ${item} - ${type} (${size}) × ${cart[key]}
+          <button onclick="reduceItem('${key}')">➖</button>
+          <button onclick="removeItem('${key}')">❌</button>
+        </li>
+      `;
+
+      message += `- ${item} ${type} (${size}) × ${cart[key]}%0A`;
+    }
+  }
+
+  document.getElementById("whatsappBtn").href =
+    "https://wa.me/254723633573?text=" + message;
+}
+
+// LOAD CART ON PAGE LOAD
+renderCart();
+</script>
+
+</body>
+</html>
