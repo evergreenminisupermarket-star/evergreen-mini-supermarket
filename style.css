@@ -1,5 +1,5 @@
 *{box-sizing:border-box;font-family:Arial}
-body{margin:0;background:#f4f4f4}
+body{margin:0;background:green}
 header{background:#2e7d32;color:white;padding:10px 20px;display:flex;justify-content:space-between}
 .logo{display:flex;align-items:center}
 .logo img{height:40px;margin-right:10px}
@@ -32,5 +32,6 @@ select {
   margin: 5px 0;
   display: block; /* ensures it shows */
 }
+
 
 
